@@ -1,0 +1,39 @@
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# Pytest
+.pytest_cache/
+
+# Database (regenerated at runtime)
+database/*.db
+
+# Generated reports
+reports/*.pdf
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+pyrightconfig.json
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Trained model artifacts (large binary files — see note below)
+# ml/trained_model/*.pkl
+
+# Gemini / Antigravity
+.gemini/
+.agents/

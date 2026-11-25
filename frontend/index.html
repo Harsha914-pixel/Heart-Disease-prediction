@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction - Home</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom py-3">
+        <div class="container">
+            <a class="navbar-brand" href="/"><i class="fas fa-heartbeat me-2"></i>HeartPredict ML</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link mx-2" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link mx-2" href="/dashboard">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link mx-2" href="/history">History</a></li>
+                    <li class="nav-item"><a class="nav-link mx-2" href="/evaluation">Model Evaluation</a></li>
+                    <li class="nav-item ms-2">
+                        <button class="theme-toggle-btn" id="theme-toggle">
+                            <i id="theme-icon" class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="container py-5 my-5 fade-in">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+                <h1 class="display-4 mb-4">AI-Powered Heart Disease Prediction</h1>
+                <p class="lead text-muted mb-4">
+                    Use machine learning to analyze health parameters and generate an educational prediction regarding the risk and presence of heart disease.
+                </p>
+                <div class="d-flex gap-3">
+                    <a href="/dashboard" class="btn btn-primary-custom btn-lg"><i class="fas fa-chart-line me-2"></i>Go to Dashboard</a>
+                    <a href="/evaluation" class="btn btn-outline-secondary btn-lg"><i class="fas fa-microscope me-2"></i>Model details</a>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center">
+                <div class="p-5" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 24px; box-shadow: var(--shadow);">
+                    <i class="fas fa-heartbeat text-danger" style="font-size: 8rem; animation: pulse 2s infinite;"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-5" style="background-color: var(--bg-card); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+        <div class="container">
+            <h2 class="text-center mb-5">How It Works</h2>
+            <div class="row g-4 text-center">
+                <div class="col-md-3">
+                    <div class="p-4">
+                        <i class="fas fa-id-card-alt text-primary mb-3" style="font-size: 2.5rem;"></i>
+                        <h4>1. Enter Information</h4>
+                        <p class="text-muted">Fill in basic demographic details and clinical symptoms.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="p-4">
+                        <i class="fas fa-vials text-primary mb-3" style="font-size: 2.5rem;"></i>
+                        <h4>2. Clinical Parameters</h4>
+                        <p class="text-muted">Provide rest and stress heart values, blood pressure, etc.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="p-4">
+                        <i class="fas fa-cogs text-primary mb-3" style="font-size: 2.5rem;"></i>
+                        <h4>3. ML Analysis</h4>
+                        <p class="text-muted">Our trained ML model analyzes inputs to detect risk and severity.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="p-4">
+                        <i class="fas fa-file-pdf text-primary mb-3" style="font-size: 2.5rem;"></i>
+                        <h4>4. Download Report</h4>
+                        <p class="text-muted">Generate and download a detailed clinical PDF summary.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="container py-5 my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h2 class="text-center mb-4">About the Project</h2>
+                <p class="text-muted">
+                    This classification system is trained on the legendary <strong>UCI Cleveland Heart Disease dataset</strong>. By mapping 13 core physiological features (including cholesterol, resting blood pressure, chest pain classification, and ST slope segmentations), the system trains classification algorithms like Logistic Regression, Random Forests, and SVMs. The highest-performing model is loaded to process prediction requests.
+                </p>
+                <div class="alert alert-warning mt-4 border-warning d-flex align-items-start gap-3" role="alert">
+                    <i class="fas fa-info-circle fs-4 text-warning"></i>
+                    <div>
+                        <strong>Educational Screening Disclaimer:</strong> This application is for educational, research, and general screening purposes. It has not been clinically validated. It does not provide medical diagnoses, treatment paths, or professional clinical guidelines.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p class="mb-0 text-muted">&copy; 2026 HeartPredict ML Project. For Educational Purposes Only.</p>
+        </div>
+    </footer>
+
+    <style>
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    </style>
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/theme.js"></script>
+</body>
+</html>
